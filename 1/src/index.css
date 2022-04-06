@@ -1,21 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Balsamiq Sans', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 .App {
-  padding: 50px 0;
   text-align: center;
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -23,21 +16,46 @@ code {
   color: black;
 }
 
+.box {
+  margin: 50px 0;
+  width: 90%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
 .all-items {
   padding: 30px;
-  min-width: 30%;
+  flex-basis: 100%;
   background-color: rgb(69, 192, 188);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .selected-items {
   padding: 30px;
-  min-width: 30%;
+  flex-basis: 100%;
   background-color: palevioletred;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h2 {
   font-size: 2rem;
 }
 
+.item {
+  margin: 5px 0;
+}
+.item .selectable {
+  cursor: pointer;
+}
 
-/* input box styling */
+@media screen and (max-width: 320px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+}

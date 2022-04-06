@@ -5,16 +5,16 @@ const Item = (props) => {
   return (
         <React.Fragment>
         {props.isSelectable?
-        <div>
+        <div className='item'>
             <input
             type="checkbox"
             id={props.id}
             name={props.title}
             onChange={props.handleCheck}
             />
-            <label htmlFor={props.id}>{props.title}</label>
+            <label className='selectable' htmlFor={props.id}>{props.title}</label>
         </div>
-        : <div>
+        : <div className='item'>
             <label>{props.title}</label>
         </div>}
         </React.Fragment>

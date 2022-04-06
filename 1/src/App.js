@@ -1,5 +1,5 @@
 import AllItems from './components/AllItems'
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { SelectContext } from './context/context';
 import SelectedItems from './components/SelectedItems';
 
@@ -18,13 +18,12 @@ function App() {
 
     
     return (
-      <div className="App App-header">
-		<SelectContext.Provider 
-		value={{selectedItems: selectedItems, 
-		getSelectedItems: getSelectedItems}}
-		>
-			<AllItems />
-			<SelectedItems />
+      <div className="App">
+		<SelectContext.Provider value={{selectedItems, getSelectedItems}}>
+			<div className='box'>
+				<AllItems />
+				<SelectedItems />
+			</div>
 		</SelectContext.Provider>
       </div>
     );

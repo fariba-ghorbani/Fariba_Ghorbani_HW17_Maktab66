@@ -16,7 +16,6 @@ const SelectedItems = () => {
                 id={+(item.id)}
                 />
             )})}
-		
 		</div>
 	)
 }

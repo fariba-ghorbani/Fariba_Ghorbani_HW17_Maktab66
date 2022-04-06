@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 
+
 const Item = (props) => {
   return (
         <React.Fragment>
@@ -23,7 +24,7 @@ const Item = (props) => {
 
 export default Item;
 
-Item.protoTypes = {
+Item.propTypes = {
     isSelectable: PropTypes.bool,
     title: PropTypes.string,
     id: PropTypes.number,

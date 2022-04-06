@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import Item from './Item'
 import { SelectContext } from '../context/context'
 
+
 const AllItems = () => {
     const [data, setData] = useState([])
     const { getSelectedItems } = useContext(SelectContext)
@@ -22,7 +23,7 @@ const AllItems = () => {
                 <Item 
                 isSelectable={true}
                 title={item.name}
-                id={item.id}
+                id={Number(item.id)}
                 handleCheck={() => getSelectedItems(item)}
                 />
             )})}

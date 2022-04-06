@@ -4,7 +4,7 @@ import { SelectContext } from '../context/context'
 
 const AllItems = () => {
     const [data, setData] = useState([])
-    const context = useContext(SelectContext)
+    const { getSelectedItems } = useContext(SelectContext)
 
     useEffect(() => {
         fetch('https://624cd439d71863d7a8103316.mockapi.io/items')
@@ -23,7 +23,7 @@ const AllItems = () => {
                 isSelectable={true}
                 title={item.name}
                 id={item.id}
-                handleCheck={() => context.getSelectedItems(item)}
+                handleCheck={() => getSelectedItems(item)}
                 />
             )})}
         </div>
